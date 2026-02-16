@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #D4AF37;
+  /* Royal Gold */
+  --background: #000000;
+  /* Absolute Black */
+  --surface: #0A0A0A;
+  --text: #FFFFFF;
+  --text-muted: #4A4A4A;
+}
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- VIP Elite Effects --- */
+
+.obsidian-bg {
+  background: radial-gradient(circle at center, #0F0F0F 0%, #000000 100%);
+}
+
+.vip-text {
+  background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #B8960C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+}
+
+.gold-glow-border {
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.4s ease;
+}
+
+.gold-glow-border:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.btn-vip {
+  background: white;
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.btn-vip:hover {
+  background: var(--primary);
+  transform: scale(1.02);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
